@@ -1,21 +1,51 @@
 [
-  {
-    "title": "House Blend",
-    "images": [
-      "coffees/House%20Blend/01-main.svg",
-      "coffees/House%20Blend/02-beans.svg"
-    ]
-  },
-  {
-    "title": "Morning Sun",
-    "images": [
-      "coffees/Morning%20Sun/01-main.svg"
-    ]
-  },
-  {
-    "title": "Night Owl",
-    "images": [
-      "coffees/Night%20Owl/01-main.svg"
-    ]
-  }
+    {
+        "title":  "Café Bustelo Espresso",
+        "images":  [
+                       "coffees/Caf%C3%A9%20Bustelo%20Espresso/71npuDkM43L._AC_SL1500_.jpg",
+                       "coffees/Caf%C3%A9%20Bustelo%20Espresso/81GlogbGAiL._AC_SL1500_.jpg",
+                       "coffees/Caf%C3%A9%20Bustelo%20Espresso/81hOyZSj7GL._AC_SL1500_.jpg",
+                       "coffees/Caf%C3%A9%20Bustelo%20Espresso/91Gc4t0bSZL._AC_SL1500_.jpg",
+                       "coffees/Caf%C3%A9%20Bustelo%20Espresso/91-wddqAdBL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Grumpy Mule High and Mighty Espresso Blend",
+        "images":  [
+                       "coffees/Grumpy%20Mule%20High%20and%20Mighty%20Espresso%20Blend/7188U%2BnlosL._AC_SL1500_.jpg",
+                       "coffees/Grumpy%20Mule%20High%20and%20Mighty%20Espresso%20Blend/71tuZ%2B86LmL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Illy Ground Espresso Coffee Medium Roast",
+        "images":  [
+                       "coffees/Illy%20Ground%20Espresso%20Coffee%20Medium%20Roast/51jgyqhkuqL._AC_SL1500_.jpg",
+                       "coffees/Illy%20Ground%20Espresso%20Coffee%20Medium%20Roast/61O%2Bt6CJBQL._AC_SL1001_.jpg",
+                       "coffees/Illy%20Ground%20Espresso%20Coffee%20Medium%20Roast/61TVQHUvnKL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Kimbo Intenso",
+        "images":  [
+                       "coffees/Kimbo%20Intenso/711PYh%2B2OKL._AC_SL1500_.jpg",
+                       "coffees/Kimbo%20Intenso/71ElHJYAYBL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Lavazza Decaf",
+        "images":  [
+                       "coffees/Lavazza%20Decaf/51fsIJm4vHL._AC_SL1000_.jpg",
+                       "coffees/Lavazza%20Decaf/61IfoYm-I5L._AC_SL1500_.jpg",
+                       "coffees/Lavazza%20Decaf/71WVq6KIcuL._AC_SL1500_.jpg",
+                       "coffees/Lavazza%20Decaf/71YZG888RgL._AC_SL1500_.jpg",
+                       "coffees/Lavazza%20Decaf/81T2fQyGYAL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Segafredo Zanetti Intermezzo",
+        "images":  [
+                       "coffees/Segafredo%20Zanetti%20Intermezzo/4GK_Intermezzo_Segafredo_Ground_250g_1024x1024.webp",
+                       "coffees/Segafredo%20Zanetti%20Intermezzo/gc-segafredo-250g-intermezzo-1204.webp"
+                   ]
+    }
 ]
