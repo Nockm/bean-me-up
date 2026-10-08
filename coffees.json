@@ -1,0 +1,21 @@
+[
+  {
+    "title": "House Blend",
+    "images": [
+      "coffees/House%20Blend/01-main.svg",
+      "coffees/House%20Blend/02-beans.svg"
+    ]
+  },
+  {
+    "title": "Morning Sun",
+    "images": [
+      "coffees/Morning%20Sun/01-main.svg"
+    ]
+  },
+  {
+    "title": "Night Owl",
+    "images": [
+      "coffees/Night%20Owl/01-main.svg"
+    ]
+  }
+]
