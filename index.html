@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efe5">
+  <title>Bean me up — Coffee at ours</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a class="wordmark" href="./" aria-label="Bean me up home">bean me up<span class="bean" aria-hidden="true">◒</span></a><span class="header-note">GOOD COFFEE. GOOD COMPANY.</span></header>
+  <main>
+    <div class="intro"><p class="eyebrow"><span></span> COFFEE AT OURS</p><h1>What’s your cup?</h1><p class="subtitle">A few good coffees to choose from.<br>Find your favourite, then just let me know.</p></div>
+    <section class="coffee-picker" aria-label="Available coffees" tabindex="0">
+      <div class="deck" id="deck"><p class="message">Putting the coffee on…</p></div>
+      <div class="navigation" id="navigation" hidden>
+        <button class="arrow" id="previous" aria-label="Previous coffee"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12"/></svg></button>
+        <div class="position"><p id="counter" aria-live="polite"></p><div class="dots" id="dots" aria-label="Choose a coffee"></div></div>
+        <button class="arrow" id="next" aria-label="Next coffee"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6M16 12H4"/></svg></button>
+      </div>
+    </section>
+    <p class="hint" id="hint" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-4-4 4 4-4 4M8 8l-4 4 4 4"/></svg> Swipe to find your cup</p>
+  </main>
+  <dialog id="gallery" aria-labelledby="gallery-title">
+    <div class="gallery-header"><h2 id="gallery-title"></h2><button id="gallery-close" class="gallery-close" aria-label="Close photos">✕</button></div>
+    <div class="gallery-stage"><img id="gallery-image" alt=""></div>
+    <p id="image-error" hidden>This image couldn’t load. Try another photo.</p>
+    <div class="gallery-navigation">
+      <button id="image-previous" class="arrow" aria-label="Previous photo">←</button>
+      <p id="image-counter" aria-live="polite"></p>
+      <button id="image-next" class="arrow" aria-label="Next photo">→</button>
+    </div>
+    <div id="thumbnails" class="thumbnails" aria-label="Choose a photo"></div>
+    <p class="gallery-hint">Swipe through photos · tap outside to return</p>
+  </dialog>
+  <footer><span>A LITTLE COFFEE, A LITTLE CONVERSATION.</span><span class="footer-mark" aria-hidden="true">✳</span><span>MAKE YOURSELF AT HOME.</span></footer>
+</body>
+</html>
