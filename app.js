@@ -19,7 +19,7 @@ function choose(index) {
     controls[index].setAttribute('aria-current', String(index === selected));
     card.querySelector('.image-open').tabIndex = index === selected ? 0 : -1;
   });
-  counter.textContent = `${String(selected + 1).padStart(2, '0')} / ${String(coffees.length).padStart(2, '0')}`;
+  counter.textContent = `${selected + 1} / ${coffees.length}`;
 }
 previous.addEventListener('click', () => choose(selected - 1));
 next.addEventListener('click', () => choose(selected + 1));
@@ -54,10 +54,6 @@ async function load() {
     }
     cards = coffees.map((coffee, index) => {
       const card = document.createElement('article'); card.className = 'card';
-      const top = document.createElement('div'); top.className = 'card-top';
-      const number = document.createElement('span'); number.textContent = String(index + 1).padStart(2, '0');
-      const star = document.createElement('span'); star.textContent = '✳'; star.setAttribute('aria-hidden', 'true');
-      top.append(number, star);
       const image = document.createElement('img'); image.className = 'card-image'; image.src = coffee.images[0]; image.alt = ''; image.draggable = false;
       const imageOpen = document.createElement('button'); imageOpen.className = 'image-open';
       imageOpen.setAttribute('aria-label', `View photos of ${coffee.title}`);
@@ -72,8 +68,7 @@ async function load() {
         if (index !== selected) choose(index); else openGallery(index);
       });
       const title = document.createElement('h2'); title.textContent = coffee.title;
-      const bottom = document.createElement('p'); bottom.className = 'card-bottom'; bottom.textContent = 'ON THE COFFEE TABLE';
-      card.append(top, imageOpen, title, bottom);
+      card.append(imageOpen, title);
       card.addEventListener('click', () => { if (card.dataset.position !== 'active') choose(index); });
       deck.append(card); return card;
     });
@@ -83,7 +78,6 @@ async function load() {
     });
     navigation.hidden = false;
     previous.disabled = next.disabled = coffees.length < 2;
-    document.querySelector('#hint').hidden = coffees.length < 2;
     choose(0);
   } catch {
     deck.replaceChildren();
