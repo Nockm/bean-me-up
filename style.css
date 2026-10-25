@@ -28,8 +28,12 @@ main{
 .card h2{font-size:clamp(20px,2.8vw,25px);margin:12px 0 6px}
 .card[data-position="previous"]{transform:translateX(calc(-50% - var(--card-spread))) translateY(19px) rotate(-13deg)}
 .card[data-position="next"]{transform:translateX(calc(-50% + var(--card-spread))) translateY(19px) rotate(11deg)}
-.navigation{margin-top:8px;gap:clamp(12px,4vw,34px)}
-.position{min-width:0;max-width:calc(100% - 112px)}
+.navigation{display:grid;grid-template-columns:43px minmax(0,max-content) 43px;grid-template-rows:auto auto;margin-top:8px;column-gap:clamp(12px,4vw,34px);row-gap:4px;align-items:center;justify-content:center}
+.position{display:contents}
+#counter{grid-column:2;grid-row:1;margin:0}
+#dots{grid-column:2;grid-row:2}
+#previous{grid-column:1;grid-row:2}
+#next{grid-column:3;grid-row:2}
 .dots{flex-wrap:wrap}
 .hint{align-self:start;margin:0}
 @media(max-height:500px) and (min-width:600px){

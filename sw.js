@@ -1,5 +1,5 @@
 // Bump this version when changing the offline shell or caching behaviour.
-const CACHE = 'bean-me-up-v6';
+const CACHE = 'bean-me-up-v8';
 const BASE = new URL('./', self.location.href);
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'coffees.json',
   'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png'];
