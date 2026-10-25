@@ -4,4 +4,39 @@
 @media(min-width:1000px) and (min-height:850px){main{padding-top:55px}.coffee-picker{margin-top:50px}.deck{height:410px}.card{width:302px;height:390px}.card-image{height:262px}.card[data-position="previous"]{transform:translateX(calc(-50% - 146px)) translateY(19px) rotate(-13deg)}.card[data-position="next"]{transform:translateX(calc(-50% + 146px)) translateY(19px) rotate(11deg)}}
 @media(max-width:600px){.masthead{padding:24px}.wordmark{font-size:22px}.header-note{display:none}main{padding:24px 16px 30px}h1{letter-spacing:-1.5px}.coffee-picker{margin-top:34px;overflow:hidden;padding-top:16px;margin-bottom:-5px}.deck{height:352px}.card{width:242px;height:326px;padding:12px}.card-image{height:213px}.card h2{font-size:23px}.card[data-position="previous"]{transform:translateX(calc(-50% - 65px)) translateY(14px) rotate(-12deg)}.card[data-position="next"]{transform:translateX(calc(-50% + 65px)) translateY(14px) rotate(10deg)}.navigation{margin-top:14px}.hint{margin-top:22px}footer{justify-content:center;padding:20px 0;font-size:7px;gap:15px}footer>span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Keep the carousel centred, with balanced space for its heading and hint. */
+body{min-height:100svh;min-height:100dvh}
+main{
+  --card-width:clamp(224px,36vw,302px);
+  --card-height:clamp(326px,48svh,390px);
+  --card-spread:clamp(65px,13vw,146px);
+  flex:1;
+  display:grid;
+  grid-template-rows:minmax(min-content,1fr) auto minmax(min-content,1fr);
+  gap:clamp(16px,3svh,28px);
+  min-height:100svh;
+  min-height:100dvh;
+  padding:max(20px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  overflow-x:clip;
+}
+.intro{align-self:end}
+.intro h1{font-size:clamp(30px,5vw,46px);letter-spacing:-1.5px;margin:0;line-height:1.15}
+.coffee-picker{align-self:center;min-width:0;margin:0 auto;padding:0;overflow:visible}
+.deck{height:calc(var(--card-height) + 68px)}
+.card{top:18px;width:var(--card-width);height:var(--card-height);padding:14px}
+.card-image{height:calc(var(--card-height) - 144px)}
+.card h2{font-size:clamp(20px,2.8vw,25px);margin:12px 0 6px}
+.card[data-position="previous"]{transform:translateX(calc(-50% - var(--card-spread))) translateY(19px) rotate(-13deg)}
+.card[data-position="next"]{transform:translateX(calc(-50% + var(--card-spread))) translateY(19px) rotate(11deg)}
+.navigation{margin-top:8px;gap:clamp(12px,4vw,34px)}
+.position{min-width:0;max-width:calc(100% - 112px)}
+.dots{flex-wrap:wrap}
+.hint{align-self:start;margin:0}
+@media(max-height:500px) and (min-width:600px){
+  main{--card-width:210px;--card-height:280px;--card-spread:70px;grid-template-columns:minmax(150px,1fr) minmax(0,1.6fr);grid-template-rows:1fr 1fr;column-gap:24px;row-gap:16px}
+  .intro{grid-column:1;grid-row:1}
+  .hint{grid-column:1;grid-row:2}
+  .coffee-picker{grid-column:2;grid-row:1 / 3}
+  .card h2{font-size:18px}
+}
 .image-open{position:relative;display:block;border:0;padding:0;background:transparent;cursor:zoom-in;border-radius:6px;flex-shrink:0;width:100%;line-height:0}.image-open:focus-visible{outline-offset:2px}.photo-badge{position:absolute;right:9px;bottom:9px;padding:7px 9px;background:#faf8f1e8;color:var(--ink);border-radius:20px;font-size:10px;line-height:1;letter-spacing:.3px;box-shadow:0 1px 4px #0001}.gallery-open{overflow:hidden}dialog{width:min(600px,calc(100% - 28px));max-height:calc(100svh - 32px);padding:20px;background:#faf8f1;color:var(--ink);border:1px solid var(--line);border-radius:16px;overflow:auto;box-shadow:0 20px 80px #0003}dialog::backdrop{background:#222c25b3;backdrop-filter:blur(4px)}.gallery-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:15px}.gallery-header h2{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:400;margin:0;overflow-wrap:anywhere}.gallery-close{width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;color:var(--ink);background:transparent;cursor:pointer}.gallery-stage{touch-action:pan-y;display:flex;align-items:center;justify-content:center;background:#eeede3;border-radius:8px;overflow:hidden}.gallery-stage img{display:block;max-width:100%;width:100%;height:min(50svh,460px);object-fit:contain}.gallery-navigation{display:flex;align-items:center;justify-content:center;gap:25px;margin:16px 0}.gallery-navigation p{min-width:55px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:1px}.thumbnails{display:flex;gap:8px;justify-content:flex-start;overflow-x:auto;padding:5px;max-width:100%}.thumbnail{padding:3px;width:60px;height:60px;flex-shrink:0;background:transparent;border:1px solid transparent;border-radius:8px;cursor:pointer}.thumbnail img{width:100%;height:100%;object-fit:contain;border-radius:4px;background:#eeede3}.thumbnail[aria-current="true"]{border-color:#6a7656;background:#e5e6d8}.gallery-hint{text-align:center;color:var(--muted);font-size:11px;margin:16px 0 0}#image-error{font-size:13px;text-align:center;color:#9b4931}.thumbnails[hidden],.gallery-hint[hidden]{display:none}
