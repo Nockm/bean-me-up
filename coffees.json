@@ -25,13 +25,6 @@
                    ]
     },
     {
-        "title":  "Kimbo Intenso",
-        "images":  [
-                       "coffees/Kimbo%20Intenso/711PYh%2B2OKL._AC_SL1500_.jpg",
-                       "coffees/Kimbo%20Intenso/71ElHJYAYBL._AC_SL1500_.jpg"
-                   ]
-    },
-    {
         "title":  "Lavazza Decaf",
         "images":  [
                        "coffees/Lavazza%20Decaf/51fsIJm4vHL._AC_SL1000_.jpg",
@@ -46,6 +39,21 @@
         "images":  [
                        "coffees/Segafredo%20Zanetti%20Intermezzo/4GK_Intermezzo_Segafredo_Ground_250g_1024x1024.webp",
                        "coffees/Segafredo%20Zanetti%20Intermezzo/gc-segafredo-250g-intermezzo-1204.webp"
+                   ]
+    },
+    {
+        "title":  "Twinings Earl Grey",
+        "images":  [
+                       "coffees/Twinings%20Earl%20Grey/41bJyo73uHL._AC_.jpg",
+                       "coffees/Twinings%20Earl%20Grey/41FRHSbRsLL._AC_.jpg",
+                       "coffees/Twinings%20Earl%20Grey/81mo951X4aL._AC_SL1500_.jpg"
+                   ]
+    },
+    {
+        "title":  "Yorkshire Tea",
+        "images":  [
+                       "coffees/Yorkshire%20Tea/71jMvotCmrL._AC_SL1181_.jpg",
+                       "coffees/Yorkshire%20Tea/71mh5JmphRL._AC_SL1280_.jpg"
                    ]
     }
 ]
