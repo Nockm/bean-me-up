@@ -40,6 +40,14 @@ In the repository's **Settings → Pages**, choose **Deploy from a branch**, sel
 
 All website URLs are relative, so the site works under the repository's `/bean-me-up/` path as well as a custom domain. GitHub Pages may take a few minutes to publish changes. The optional Google Fonts styles fall back to system fonts if unavailable.
 
+## Install and offline use
+
+The menu can be installed as an app from a supporting browser's install menu. On iPhone or iPad, use Share → Add to Home Screen. Installation requires HTTPS (as provided by GitHub Pages) or localhost for development.
+
+After the first online visit, the page and menu are saved for offline use. Photos are saved as they load once the service worker is active; refresh once after the first visit to cache the displayed photos. Open a drink's gallery online to save its other photos before going offline. Photos that have not been cached still need a connection. Browsers may clear saved data to free storage.
+
+Online requests prefer the latest published files. Bump the cache version in `sw.js` when changing the offline shell or caching behaviour. Updates activate once the app's existing tabs/windows are closed. Keep the manifest and service worker URLs relative so installation also works under GitHub Pages repository paths.
+
 ## Local preview and development
 
 Serve the repository root with any static HTTP server; opening the HTML as a local file does not support loading the JSON manifest reliably. For example:

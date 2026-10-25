@@ -156,3 +156,11 @@ stage.addEventListener('touchend', event => {
 }, { passive: true });
 stage.addEventListener('touchcancel', () => { galleryTouch = null; }, { passive: true });
 load();
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(error => {
+      console.warn('Offline support could not be enabled.', error);
+    });
+  });
+}

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node scripts/server.mjs",
-    "test": "node --test scripts/catalog.test.mjs",
+    "test": "node --test scripts/catalog.test.mjs scripts/pwa.test.mjs",
     "manifest": "node scripts/generate-manifest.mjs"
   },
   "engines": {
